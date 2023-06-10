@@ -1,0 +1,13 @@
+bool compareStrings(const std::string& a, const std::string& b) {
+    if (a.length() == b.length()) {
+        return a < b;  
+    } else {
+        return a.length() < b.length();  
+    }
+}
+
+std::vector<std::string> bigSorting(const std::vector<std::string>& unsorted) {
+    std::vector<std::string> sorted_array = unsorted;
+    std::sort(sorted_array.begin(), sorted_array.end(), compareStrings);  
+    return sorted_array;
+}
